@@ -4,10 +4,13 @@
     <xacro:include filename="$(find abb_arm_description)/urdf/inertial_macros.xacro"/>
 
     <!-- Include platform -->
-    <xacro:include filename="$(find abb_arm_description)/urdf/platform.xacro"/>
+    <!-- <xacro:include filename="$(find abb_arm_description)/urdf/platform.xacro"/> -->
 
     <!-- Include abb arm -->
-    <xacro:include filename="$(find abb_arm_description)/urdf/abb.xacro"/>
+    <xacro:include filename="$(find abb_arm_description)/urdf/abb_arm.xacro"/>
+
+    <!-- Include major components -->
+    <xacro:include filename="$(find abb_arm_description)/urdf/major_components.xacro"/>
 
     <!-- Include ros2_control -->
     <xacro:include filename="$(find abb_arm_description)/urdf/abb_arm.ros2_control.xacro"/>

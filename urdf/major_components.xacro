@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id f0912ad76048a2e7ed12d76c -->
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="major_components">
+  <!-- Link base_plate__mild_steel -->
+  <link name="base_plate__mild_steel">
+    <inertial>
+      <origin xyz="-0.295151 0.0518164 0.226115" rpy="0 0 0"/>
+      <mass value="591"/>
+      <inertia ixx="84.5177" ixy="-4.82016" ixz="9.4146" iyy="98.5566" iyz="-7.20458" izz="93.259"/>
+    </inertial>
+    <!-- Part right_leg -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/right_leg.stl"/>
+      </geometry>
+      <material name="right_leg_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/right_leg.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part vacuum_pump -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/vacuum_pump.stl"/>
+      </geometry>
+      <material name="vacuum_pump_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/vacuum_pump.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part system_controller -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/system_controller.stl"/>
+      </geometry>
+      <material name="system_controller_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/system_controller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part compressor -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/compressor.stl"/>
+      </geometry>
+      <material name="compressor_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/compressor.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part abb_controller -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/abb_controller.stl"/>
+      </geometry>
+      <material name="abb_controller_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/abb_controller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part counter_weight_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/counter_weight_2.stl"/>
+      </geometry>
+      <material name="counter_weight_2_material">
+        <color rgba="0.796078 0.796078 0.796078 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/counter_weight_2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part base_plate__mild_steel -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/base_plate__mild_steel.stl"/>
+      </geometry>
+      <material name="base_plate__mild_steel_material">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/base_plate__mild_steel.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part counter_weight_1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/counter_weight_1.stl"/>
+      </geometry>
+      <material name="counter_weight_1_material">
+        <color rgba="0.796078 0.796078 0.796078 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/counter_weight_1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_leg -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/left_leg.stl"/>
+      </geometry>
+      <material name="left_leg_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file://$(find abb_arm_description)/assets/major_components/left_leg.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_plate_mild_steel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_plate__mild_steel"/>
+    <origin xyz="-0.295151 0.0518164 0.226115" rpy="0 0 0"/>
+  </joint>
+</robot>
