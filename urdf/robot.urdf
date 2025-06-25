@@ -15,7 +15,7 @@
     <visual>
       <origin xyz="-0.223542 -0.043641 -0.379314" rpy="0.00762494 -0.0869335 -0.0875981"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_base_cad_rev05_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -24,7 +24,7 @@
     <collision>
       <origin xyz="-0.223542 -0.043641 -0.379314" rpy="0.00762494 -0.0869335 -0.0875981"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -39,7 +39,7 @@
     <visual>
       <origin xyz="4.32987e-15 7.77156e-16 0.1595" rpy="-3.14159 2.77556e-17 -1.09504e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link1_cad_rev04_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -48,7 +48,7 @@
     <collision>
       <origin xyz="4.32987e-15 7.77156e-16 0.1595" rpy="-3.14159 2.77556e-17 -1.09504e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -63,7 +63,7 @@
     <visual>
       <origin xyz="-0.175 0.495 0.1225" rpy="1.5708 -3.41524e-17 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link2_cad_rev04_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -72,7 +72,7 @@
     <collision>
       <origin xyz="-0.175 0.495 0.1225" rpy="1.5708 -3.41524e-17 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -87,7 +87,7 @@
     <visual>
       <origin xyz="-0.175 -1.395 -0.1492" rpy="-1.5708 3.84892e-17 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link3_cad_rev04_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -96,7 +96,7 @@
     <collision>
       <origin xyz="-0.175 -1.395 -0.1492" rpy="-1.5708 3.84892e-17 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -111,7 +111,7 @@
     <visual>
       <origin xyz="-2.08167e-16 1.57 0.5151" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link4_cad_rev04_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -120,7 +120,7 @@
     <collision>
       <origin xyz="-2.08167e-16 1.57 0.5151" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -135,7 +135,7 @@
     <visual>
       <origin xyz="-1.135 -1.57 -0.067" rpy="-1.5708 -3.79471e-18 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link5_cad_rev04_v1_material">
         <color rgba="0.843137 0.843137 0.843137 1"/>
@@ -144,7 +144,7 @@
     <collision>
       <origin xyz="-1.135 -1.57 -0.067" rpy="-1.5708 -3.79471e-18 -1.38778e-17"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -159,7 +159,7 @@
     <visual>
       <origin xyz="8.04912e-16 1.5704 1.17" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/polisher.stl"/>
       </geometry>
       <material name="polisher_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -168,14 +168,14 @@
     <collision>
       <origin xyz="8.04912e-16 1.5704 1.17" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/polisher.stl"/>
       </geometry>
     </collision>
     <!-- Part irb4600_60kg_205_link6_cad_rev04_v1 -->
     <visual>
       <origin xyz="1.66533e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
       </geometry>
       <material name="irb4600_60kg_205_link6_cad_rev04_v1_material">
         <color rgba="0.501961 0.501961 0.501961 1"/>
@@ -184,14 +184,14 @@
     <collision>
       <origin xyz="1.66533e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part polisher_2 -->
     <visual>
       <origin xyz="7.35523e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher__2.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/polisher__2.stl"/>
       </geometry>
       <material name="polisher_2_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -200,7 +200,7 @@
     <collision>
       <origin xyz="7.35523e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher__2.stl"/>
+        <mesh filename="file://$(find abb_arm_description)/abb_arm/assets/polisher__2.stl"/>
       </geometry>
     </collision>
   </link>
@@ -254,7 +254,7 @@
   </joint>
   <!-- Joint from base_link to base_cad -->
   <joint name="base_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="irb4600_60kg_205_base_cad_rev05_v1"/>
   </joint>

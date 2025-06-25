@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="empty_world">
+    <!-- A global light source -->
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun
+      </uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane
+      </uri>
+    </include>
+
+  </world>
+</sdf>
