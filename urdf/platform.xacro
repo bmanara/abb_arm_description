@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Chassis -->
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+    <link name="chassis">
+        <visual>
+            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.8 0.58 0.3"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.8 0.58 0.3"/>
+            </geometry>
+        </collision>
+       <xacro:inertial_box mass="84" x="0.8" y="0.58" z="0.3">
+            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+</robot>

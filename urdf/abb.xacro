@@ -253,9 +253,9 @@
     <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from base_link to base_cad -->
-  <joint name="base_joint" type="fixed">
-    <origin xyz="0 0 0.5" rpy="0 0 0"/>
-    <parent link="base_link"/>
+  <joint name="chassis_arm_base_joint" type="fixed">
+    <origin xyz="0.3 0 0.65" rpy="0 0 0"/>
+    <parent link="chassis"/>
     <child link="irb4600_60kg_205_base_cad_rev05_v1"/>
   </joint>
 </robot>
