@@ -23,7 +23,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY abb_arm config launch rviz
+  DIRECTORY abb_arm config launch rviz urdf
   DESTINATION share/${PROJECT_NAME}
 )
 

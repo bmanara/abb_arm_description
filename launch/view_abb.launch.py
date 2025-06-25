@@ -8,7 +8,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     abb_arm_description_dir = get_package_share_directory('abb_arm_description')
-    abb_arm_urdf = os.path.join(abb_arm_description_dir, 'abb_arm', 'robot.urdf')
+    abb_arm_urdf = os.path.join(abb_arm_description_dir, 'urdf', 'robot.urdf')
 
     robot_description = Command(['xacro ', abb_arm_urdf])
     robot_state_publisher_node = Node(

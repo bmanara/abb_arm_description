@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id f0912ad76048a2e7ed12d76c -->
+<robot name="abb_arm">
+  <!-- Base link -->
+  <link name="base_link" />
+  <!-- Link irb4600_60kg_205_base_cad_rev05_v1 -->
+  <link name="irb4600_60kg_205_base_cad_rev05_v1">
+    <inertial>
+      <origin xyz="-0.321182 -0.0353324 -0.305087" rpy="0 0 0"/>
+      <mass value="81.759"/>
+      <inertia ixx="1.14136" ixy="0.113422" ixz="-0.0184365" iyy="2.30969" iyz="-0.00337268" izz="3.14598"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_base_cad_rev05_v1 -->
+    <visual>
+      <origin xyz="-0.223542 -0.043641 -0.379314" rpy="0.00762494 -0.0869335 -0.0875981"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_base_cad_rev05_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.223542 -0.043641 -0.379314" rpy="0.00762494 -0.0869335 -0.0875981"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_base_cad_rev05_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link1_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link1_cad_rev04_v1">
+    <inertial>
+      <origin xyz="0.0770381 -0.0246901 -0.240698" rpy="0 0 0"/>
+      <mass value="114.511"/>
+      <inertia ixx="3.00349" ixy="0.261576" ixz="0.808083" iyy="3.91333" iyz="-0.279337" izz="3.13182"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_link1_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="4.32987e-15 7.77156e-16 0.1595" rpy="-3.14159 2.77556e-17 -1.09504e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link1_cad_rev04_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="4.32987e-15 7.77156e-16 0.1595" rpy="-3.14159 2.77556e-17 -1.09504e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link1_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link2_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link2_cad_rev04_v1">
+    <inertial>
+      <origin xyz="9.44147e-05 -0.396751 -0.0480536" rpy="0 0 0"/>
+      <mass value="75.819"/>
+      <inertia ixx="5.85954" ixy="-0.000649047" ixz="-6.58104e-08" iyy="0.434415" iyz="-0.198731" izz="6.07168"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_link2_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="-0.175 0.495 0.1225" rpy="1.5708 -3.41524e-17 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link2_cad_rev04_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.175 0.495 0.1225" rpy="1.5708 -3.41524e-17 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link2_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link3_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link3_cad_rev04_v1">
+    <inertial>
+      <origin xyz="0.0407131 0.118762 -0.198467" rpy="0 0 0"/>
+      <mass value="138.137"/>
+      <inertia ixx="3.06752" ixy="-0.317854" ixz="-0.199072" iyy="3.08575" iyz="0.0381456" izz="3.75533"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_link3_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="-0.175 -1.395 -0.1492" rpy="-1.5708 3.84892e-17 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link3_cad_rev04_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.175 -1.395 -0.1492" rpy="-1.5708 3.84892e-17 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link3_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link4_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link4_cad_rev04_v1">
+    <inertial>
+      <origin xyz="-0.00197572 0.00284651 -0.393132" rpy="0 0 0"/>
+      <mass value="29.998"/>
+      <inertia ixx="1.24629" ixy="-7.78483e-05" ixz="-0.0152437" iyy="1.29389" iyz="0.00617296" izz="0.143764"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_link4_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="-2.08167e-16 1.57 0.5151" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link4_cad_rev04_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.08167e-16 1.57 0.5151" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link4_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link5_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link5_cad_rev04_v1">
+    <inertial>
+      <origin xyz="-0.00105077 0.00040032 -0.0635485" rpy="0 0 0"/>
+      <mass value="4.058"/>
+      <inertia ixx="0.00817587" ixy="-4.61387e-05" ixz="2.08952e-06" iyy="0.00900393" iyz="1.38141e-05" izz="0.0084813"/>
+    </inertial>
+    <!-- Part irb4600_60kg_205_link5_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="-1.135 -1.57 -0.067" rpy="-1.5708 -3.79471e-18 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link5_cad_rev04_v1_material">
+        <color rgba="0.843137 0.843137 0.843137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.135 -1.57 -0.067" rpy="-1.5708 -3.79471e-18 -1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link5_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link irb4600_60kg_205_link6_cad_rev04_v1 -->
+  <link name="irb4600_60kg_205_link6_cad_rev04_v1">
+    <inertial>
+      <origin xyz="-3.63266e-05 0.000333341 -0.119747" rpy="0 0 0"/>
+      <mass value="5.718"/>
+      <inertia ixx="0.0494659" ixy="7.19253e-06" ixz="1.27941e-05" iyy="0.0494712" iyz="2.70911e-05" izz="0.0870346"/>
+    </inertial>
+    <!-- Part polisher -->
+    <visual>
+      <origin xyz="8.04912e-16 1.5704 1.17" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher.stl"/>
+      </geometry>
+      <material name="polisher_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="8.04912e-16 1.5704 1.17" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part irb4600_60kg_205_link6_cad_rev04_v1 -->
+    <visual>
+      <origin xyz="1.66533e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
+      </geometry>
+      <material name="irb4600_60kg_205_link6_cad_rev04_v1_material">
+        <color rgba="0.501961 0.501961 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="1.66533e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/irb4600_60kg_205_link6_cad_rev04_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part polisher_2 -->
+    <visual>
+      <origin xyz="7.35523e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher__2.stl"/>
+      </geometry>
+      <material name="polisher_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="7.35523e-16 1.57 1.2" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://abb_arm_description/abb_arm/assets/polisher__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from irb4600_60kg_205_link5_cad_rev04_v1 to irb4600_60kg_205_link6_cad_rev04_v1 -->
+  <joint name="joint6" type="revolute">
+    <origin xyz="0.065 -2.22045e-16 -0.067" rpy="-3.14159 1.5708 0"/>
+    <parent link="irb4600_60kg_205_link5_cad_rev04_v1"/>
+    <child link="irb4600_60kg_205_link6_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from irb4600_60kg_205_link4_cad_rev04_v1 to irb4600_60kg_205_link5_cad_rev04_v1 -->
+  <joint name="joint5" type="revolute">
+    <origin xyz="-0.067 0 -0.6199" rpy="-3.14159 1.5708 0"/>
+    <parent link="irb4600_60kg_205_link4_cad_rev04_v1"/>
+    <child link="irb4600_60kg_205_link5_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from irb4600_60kg_205_link3_cad_rev04_v1 to irb4600_60kg_205_link4_cad_rev04_v1 -->
+  <joint name="joint4" type="revolute">
+    <origin xyz="0.3401 0.175 -0.1492" rpy="3.14159 1.5708 0"/>
+    <parent link="irb4600_60kg_205_link3_cad_rev04_v1"/>
+    <child link="irb4600_60kg_205_link4_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from irb4600_60kg_205_link2_cad_rev04_v1 to irb4600_60kg_205_link3_cad_rev04_v1 -->
+  <joint name="joint3" type="revolute">
+    <origin xyz="1.38778e-17 -0.9 -0.0267" rpy="-3.14159 3.06829e-17 1.63897e-14"/>
+    <parent link="irb4600_60kg_205_link2_cad_rev04_v1"/>
+    <child link="irb4600_60kg_205_link3_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from irb4600_60kg_205_link1_cad_rev04_v1 to irb4600_60kg_205_link2_cad_rev04_v1 -->
+  <joint name="joint2" type="revolute">
+    <origin xyz="0.175 0.1225 -0.3355" rpy="1.5708 -1.6237e-15 -1.44199e-17"/>
+    <parent link="irb4600_60kg_205_link1_cad_rev04_v1"/>
+    <child link="irb4600_60kg_205_link2_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from irb4600_60kg_205_base_cad_rev05_v1 to irb4600_60kg_205_link1_cad_rev04_v1 -->
+  <joint name="joint1" type="revolute">
+    <origin xyz="-0.237443 -0.043641 -0.220421" rpy="-3.13397 -0.0869335 -0.0875981"/>
+    <parent link="irb4600_60kg_205_base_cad_rev05_v1"/>
+    <child link="irb4600_60kg_205_link1_cad_rev04_v1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from base_link to base_cad -->
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="irb4600_60kg_205_base_cad_rev05_v1"/>
+  </joint>
+</robot>
