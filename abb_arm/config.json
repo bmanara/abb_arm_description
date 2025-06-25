@@ -4,5 +4,5 @@
     "packageName": "abb_arm_description/abb_arm",
     "assemblyName": "ABB IRB4600 Assembly v8",
     "simplify_stls": true,
-    "max_stl_size": 0.5
+    "max_stl_size": 3
 }

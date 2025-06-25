@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape document_id f0912ad76048a2e7ed12d76c -->
-<robot name="abb_arm">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="abb_arm">
   <!-- Base link -->
   <link name="base_link" />
   <!-- Link irb4600_60kg_205_base_cad_rev05_v1 -->
