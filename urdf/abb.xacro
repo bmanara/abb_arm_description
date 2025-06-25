@@ -210,7 +210,7 @@
     <parent link="irb4600_60kg_205_link5_cad_rev04_v1"/>
     <child link="irb4600_60kg_205_link6_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from irb4600_60kg_205_link4_cad_rev04_v1 to irb4600_60kg_205_link5_cad_rev04_v1 -->
   <joint name="joint5" type="revolute">
@@ -218,7 +218,7 @@
     <parent link="irb4600_60kg_205_link4_cad_rev04_v1"/>
     <child link="irb4600_60kg_205_link5_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from irb4600_60kg_205_link3_cad_rev04_v1 to irb4600_60kg_205_link4_cad_rev04_v1 -->
   <joint name="joint4" type="revolute">
@@ -226,7 +226,7 @@
     <parent link="irb4600_60kg_205_link3_cad_rev04_v1"/>
     <child link="irb4600_60kg_205_link4_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from irb4600_60kg_205_link2_cad_rev04_v1 to irb4600_60kg_205_link3_cad_rev04_v1 -->
   <joint name="joint3" type="revolute">
@@ -234,7 +234,7 @@
     <parent link="irb4600_60kg_205_link2_cad_rev04_v1"/>
     <child link="irb4600_60kg_205_link3_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from irb4600_60kg_205_link1_cad_rev04_v1 to irb4600_60kg_205_link2_cad_rev04_v1 -->
   <joint name="joint2" type="revolute">
@@ -242,7 +242,7 @@
     <parent link="irb4600_60kg_205_link1_cad_rev04_v1"/>
     <child link="irb4600_60kg_205_link2_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from irb4600_60kg_205_base_cad_rev05_v1 to irb4600_60kg_205_link1_cad_rev04_v1 -->
   <joint name="joint1" type="revolute">
@@ -250,7 +250,7 @@
     <parent link="irb4600_60kg_205_base_cad_rev05_v1"/>
     <child link="irb4600_60kg_205_link1_cad_rev04_v1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <limit effort="1000" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
   <!-- Joint from base_link to base_cad -->
   <joint name="base_joint" type="fixed">

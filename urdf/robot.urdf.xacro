@@ -2,4 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="abb_arm">
     <!-- Include abb arm -->
     <xacro:include filename="$(find abb_arm_description)/urdf/abb.xacro"/>
+
+    <!-- Include ros2_control -->
+    <xacro:include filename="$(find abb_arm_description)/urdf/abb_arm.ros2_control.xacro"/>
 </robot>
