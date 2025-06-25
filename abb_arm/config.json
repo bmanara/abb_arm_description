@@ -1,0 +1,6 @@
+{
+    "documentId": "f0912ad76048a2e7ed12d76c",
+    "output_format": "urdf",
+    "packageName": "abb_arm_description/abb_arm",
+    "assemblyName": "ABB IRB4600 Assembly v8"
+}
