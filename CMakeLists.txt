@@ -23,7 +23,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY abb_arm config launch rviz urdf worlds
+  DIRECTORY abb_arm assets config launch rviz urdf worlds
   DESTINATION share/${PROJECT_NAME}
 )
 
