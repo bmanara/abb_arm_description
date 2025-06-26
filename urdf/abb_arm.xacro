@@ -260,7 +260,7 @@
   </joint> -->
   <!-- Joint from base_plate to base_cad -->
   <joint name="base_plate_base_cad_joint" type="fixed">
-    <origin xyz="0.62 0.08 0.4" rpy="0 0.05 0.1"/>
+    <origin xyz="0.62 0.08 0.391" rpy="0 0.08 0.1"/>
     <parent link="base_plate__mild_steel"/>
     <child link="irb4600_60kg_205_base_cad_rev05_v1"/>
   </joint>

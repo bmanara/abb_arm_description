@@ -56,7 +56,7 @@ def generate_launch_description():
         arguments=['-world', 'empty_world', 
                    '-topic', '/robot_description', 
                    '-name', 'abb_arm',
-                   '-z', '0.5'],
+                   '-z', '0.6'],
         output='screen'
     )
 
