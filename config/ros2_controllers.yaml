@@ -2,10 +2,13 @@
 controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
+    use_sim_time: true
 
     abb_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -31,3 +34,15 @@ abb_arm_controller:
       joint4: {p: 100.0, i: 0.0, d: 1.0}
       joint5: {p: 100.0, i: 0.0, d: 1.0}
       joint6: {p: 100.0, i: 0.0, d: 1.0}
+
+diff_drive_controller:
+  ros__parameters:
+    publish_rate: 100.0
+    base_frame_id: base_link
+
+    left_wheel_names: ['left_wheel_joint']
+    right_wheel_names: ['right_wheel_joint']
+    wheel_separation: 1.23 
+    wheel_radius: 0.05
+
+    use_stamped_vel: false

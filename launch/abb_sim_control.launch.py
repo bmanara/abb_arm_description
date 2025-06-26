@@ -5,9 +5,10 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command
+from launch.substitutions import Command, PathJoinSubstitution
 
 from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
@@ -82,11 +83,48 @@ def generate_launch_description():
         ]
     )
 
+    diff_drive_controller_spawner = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+                package="controller_manager",
+                executable="spawner",
+                arguments=["diff_drive_controller"]
+            )
+        ]
+    )
+
+    twist_mux = Node(
+        package='twist_mux',
+        executable='twist_mux',
+        name='twist_mux',
+        output='screen',
+        parameters=[
+            PathJoinSubstitution([
+                FindPackageShare('abb_arm_description'),
+                'config',
+                'twist_mux.yaml'
+            ]),
+            {'use_sim_time': True},
+        ],
+        remappings=[('/cmd_vel_out', 'diff_drive_controller/cmd_vel_unstamped')]
+    )
+
+    bridge_params = os.path.join(get_package_share_directory('abb_arm_description'), 'config', 'gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['--ros-args', '-p', f'config_file:={bridge_params}']
+    )
+
     return LaunchDescription([
         robot_state_publisher_node,
         rviz2_node,
         gazebo,
         spawn_entity,
         joint_state_broadcaster_spawner,
-        abb_arm_controller_spawner
+        abb_arm_controller_spawner,
+        diff_drive_controller_spawner,
+        twist_mux,
+        ros_gz_bridge,
     ])

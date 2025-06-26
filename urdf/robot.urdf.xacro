@@ -1,5 +1,39 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="abb_arm">
+    <gazebo>
+        <plugin name="gz::sim::systems::DiffDrive" filename="gz-sim-diff-drive-system">
+            <!-- Wheel Information -->
+            <left_joint>left_wheel_joint</left_joint>
+            <right_joint>right_wheel_joint</right_joint>
+            <wheel_separation>1.23</wheel_separation>
+            <wheel_radius>0.05</wheel_radius>
+
+            <!-- Limits -->
+            <max_linear_acceleration>0.66</max_linear_acceleration>
+
+            <!-- Input -->
+            <topic>/cmd_vel</topic>
+
+            <!-- Output -->
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_link</child_frame_id>
+            <odom_topic>/odom</odom_topic>
+            <odom_publisher_frequency>100</odom_publisher_frequency>
+
+            <tf_topic>/tf</tf_topic>
+
+        </plugin>
+
+        <plugin name="gz::sim::systems::JointStatePublisher" filename="gz-sim-joint-state-publisher-system">
+            <topic>/joint_states</topic>
+            <joint_name>left_wheel_joint</joint_name>
+            <joint_name>right_wheel_joint</joint_name>
+        </plugin>
+    </gazebo>
+
+    <!-- Include gazebo plugins -->
+    <!-- <xacro:include filename="$(find abb_arm_description)/urdf/gazebo_control.xacro"/> -->
+
     <!-- Include color macros -->
     <xacro:include filename="$(find abb_arm_description)/urdf/colours.xacro"/>
 
@@ -21,7 +55,4 @@
 
     <!-- Include ros2_control -->
     <xacro:include filename="$(find abb_arm_description)/urdf/ros2_control.xacro"/>
-
-    <!-- Include gazebo plugins -->
-    <xacro:include filename="$(find abb_arm_description)/urdf/gazebo_control.xacro"/>
 </robot>
