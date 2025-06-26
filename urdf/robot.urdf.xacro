@@ -12,6 +12,9 @@
     <!-- Include major components -->
     <xacro:include filename="$(find abb_arm_description)/urdf/major_components.xacro"/>
 
+    <!-- Include mir platform -->
+    <xacro:include filename="$(find abb_arm_description)/urdf/mir_platform.xacro"/>
+
     <!-- Include ros2_control -->
     <xacro:include filename="$(find abb_arm_description)/urdf/abb_arm.ros2_control.xacro"/>
 </robot>
