@@ -3,6 +3,7 @@
     <ros2_control name="ros2_control_system" type="system">
         <hardware>
             <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            <!-- <plugin>mock_components/GenericSystem</plugin> -->
         </hardware>
 
         <!-- ABB Arm -->

@@ -4,16 +4,23 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, TimerAction
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command, PathJoinSubstitution
+from launch.substitutions import Command, PathJoinSubstitution, LaunchConfiguration
 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-
+    
 
 def generate_launch_description():
     abb_arm_description_dir = get_package_share_directory('abb_arm_description')
     abb_arm_urdf = os.path.join(abb_arm_description_dir, 'urdf', 'robot.urdf.xacro')
+    launch_rviz= LaunchConfiguration('launch_rviz')
+    launch_rviz_arg = DeclareLaunchArgument(
+        'launch_rviz',
+        default_value='true',
+        description='Whether to start RViz'
+    )
 
     robot_description = Command(['xacro ', abb_arm_urdf])
     robot_state_publisher_node = Node(
@@ -34,7 +41,10 @@ def generate_launch_description():
         executable='rviz2',
         name='rviz2',
         output='screen',
+        parameters=[{'use_sim_time': True}],
         arguments=['-d', rviz2_config],
+        condition=IfCondition(launch_rviz)
+        
     )
 
     world = os.path.join(abb_arm_description_dir, 'worlds', 'empty.world')
@@ -118,6 +128,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        launch_rviz_arg,
         robot_state_publisher_node,
         rviz2_node,
         gazebo,
