@@ -50,4 +50,13 @@ Two changes to the code need to be made in order to work for your local machine.
 5. Let robot navigate to desired goal. 
 
 ---
-#### How to control ABB arm (with Moveit)
+#### How to control ABB arm (with Moveit) 
+0. Change direction into your workstation. Ensure `abb_arm_moveit_config` is installed and built as a package.
+1. Run `ros2 launch abb_arm_description abb_sim_moveit.launch.py mapping_mode:='<my_bool>'`
+2. Wait for Rviz, Gazebo and `Moveit` to launch.
+3. Done! Play around with goal poses in the Moveit panel.
+
+---
+#### Exiting/Terminating Simulation
+It is recommended to terminate and shutdown the simulation by closing the Gazebo Simulation Window.
+Ctrl + C works too, but controller nodes might take a little longer to shutdown and is more unreliable.
