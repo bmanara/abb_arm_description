@@ -31,8 +31,7 @@
         </plugin>
     </gazebo>
 
-    <!-- Include gazebo plugins -->
-    <!-- <xacro:include filename="$(find abb_arm_description)/urdf/gazebo_control.xacro"/> -->
+    <link name="base_link"/>
 
     <!-- Include color macros -->
     <xacro:include filename="$(find abb_arm_description)/urdf/colours.xacro"/>

@@ -127,6 +127,49 @@ def generate_launch_description():
         arguments=['--ros-args', '-p', f'config_file:={bridge_params}']
     )
 
+    slam_params_file = PathJoinSubstitution([
+        FindPackageShare('abb_arm_description'),
+        'config',
+        'mapper_params_online_async.yaml'
+    ])
+    slam_launch = TimerAction(
+        period=3.0,
+        actions=[
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([
+                    PathJoinSubstitution([
+                        FindPackageShare('slam_toolbox'),
+                        'launch',
+                        'online_async_launch.py'
+                    ])
+                ]),
+                launch_arguments={
+                    'slam_params_file': slam_params_file,
+                    'use_sim_time': 'true'
+                }.items()
+            )
+        ]
+    )
+
+    nav2_launch = TimerAction(
+        period=3.0,  # Wait for 4 seconds before starting Navigation2
+        actions=[
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([
+                    PathJoinSubstitution([
+                        FindPackageShare('nav2_bringup'),
+                        'launch',
+                        'navigation_launch.py'
+                    ])
+                ]),
+                launch_arguments={
+                    'use_sim_time': 'true'
+                }.items()
+                
+            )
+        ]
+    )
+
     return LaunchDescription([
         launch_rviz_arg,
         robot_state_publisher_node,
@@ -138,4 +181,6 @@ def generate_launch_description():
         diff_drive_controller_spawner,
         twist_mux,
         ros_gz_bridge,
+        slam_launch,
+        nav2_launch,
     ])
