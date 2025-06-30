@@ -4,7 +4,7 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, TimerAction
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, PathJoinSubstitution, LaunchConfiguration
 
@@ -20,6 +20,13 @@ def generate_launch_description():
         'launch_rviz',
         default_value='true',
         description='Whether to start RViz'
+    )
+
+    mapping_mode = LaunchConfiguration('mapping_mode')
+    mapping_mode_arg = DeclareLaunchArgument(
+        'mapping_mode',
+        default_value='false',
+        description='Whether to start in mapping mode (true) or localization/navigation mode with a map(false).'
     )
 
     robot_description = Command(['xacro ', abb_arm_urdf])
@@ -44,7 +51,6 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}],
         arguments=['-d', rviz2_config],
         condition=IfCondition(launch_rviz)
-        
     )
 
     world = os.path.join(abb_arm_description_dir, 'worlds', 'empty.world')
@@ -132,6 +138,7 @@ def generate_launch_description():
         'config',
         'mapper_params_online_async.yaml'
     ])
+
     slam_launch = TimerAction(
         period=3.0,
         actions=[
@@ -146,32 +153,46 @@ def generate_launch_description():
                 launch_arguments={
                     'slam_params_file': slam_params_file,
                     'use_sim_time': 'true'
-                }.items()
+                }.items(),
+                condition=IfCondition(mapping_mode)
             )
         ]
     )
 
+    nav2_params_file = PathJoinSubstitution([
+        FindPackageShare('abb_arm_description'),
+        'config',
+        'nav2_params.yaml'
+    ])
+    map_yaml_file = "/home/brian_2025/Github/moveit_ws/src/abb_arm_description/maps/my_map_save.yaml"  # DO NOT USE PACKAGE FILE PATH (IDK WHY IT DOESNT WORK)
+    
     nav2_launch = TimerAction(
-        period=3.0,  # Wait for 4 seconds before starting Navigation2
+        period=3.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
                     PathJoinSubstitution([
                         FindPackageShare('nav2_bringup'),
                         'launch',
-                        'navigation_launch.py'
+                        'bringup_launch.py'
                     ])
                 ]),
                 launch_arguments={
-                    'use_sim_time': 'true'
-                }.items()
-                
+                    'use_sim_time': 'true',
+                    'params_file': nav2_params_file,
+                    'map': map_yaml_file,
+                }.items(),
+                condition=UnlessCondition(mapping_mode)
             )
         ]
     )
 
-    return LaunchDescription([
+    arguments = [
         launch_rviz_arg,
+        mapping_mode_arg
+    ]
+
+    nodes_to_launch = [
         robot_state_publisher_node,
         rviz2_node,
         gazebo,
@@ -182,5 +203,7 @@ def generate_launch_description():
         twist_mux,
         ros_gz_bridge,
         slam_launch,
-        nav2_launch,
-    ])
+        nav2_launch
+    ]   
+
+    return LaunchDescription(arguments + nodes_to_launch)
