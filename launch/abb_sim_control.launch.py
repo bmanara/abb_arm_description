@@ -140,7 +140,7 @@ def generate_launch_description():
     ])
 
     slam_launch = TimerAction(
-        period=3.0,
+        period=4.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
@@ -167,7 +167,7 @@ def generate_launch_description():
     map_yaml_file = "/home/brian_2025/Github/moveit_ws/src/abb_arm_description/maps/my_map_save.yaml"  # DO NOT USE PACKAGE FILE PATH (IDK WHY IT DOESNT WORK)
     
     nav2_launch = TimerAction(
-        period=3.0,
+        period=4.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
