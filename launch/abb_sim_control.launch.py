@@ -25,7 +25,7 @@ def generate_launch_description():
     mapping_mode = LaunchConfiguration('mapping_mode')
     mapping_mode_arg = DeclareLaunchArgument(
         'mapping_mode',
-        default_value='false',
+        default_value='true',
         description='Whether to start in mapping mode (true) or localization/navigation mode with a map(false).'
     )
 
